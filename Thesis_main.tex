@@ -1,0 +1,241 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[unicode,pdfcover]{sufethesis}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={博士论文标题},
+ pdfauthor={你的名字},
+ pdfsubject={华南理工大学博士学位论文},
+ pdfkeywords={关键字1, 关键字2},
+ unicode=false,linkcolor=blue, anchorcolor=black, citecolor=olive, filecolor=magenta, menucolor=red, urlcolor=magenta, pdfstartview=FitH}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{\texorpdfstring%
+  {L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+  {LyX}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{xunicode}
+\begin{document}
+
+\title{上海财经大学博士毕业论文LaTex\& Lyx模板}
+
+
+\author{司继春}
+
+
+\supervisor{指导教师：周亚虹\ 副教授}
+
+
+\institute{上海财经大学}
+
+
+\date{2016年8月1日}
+
+\maketitle
+\frontmatter
+\begin{abstractCN}
+本文主要介绍了上海财经大学博士学位论文\LaTeX 和\LyX{}模板的使用方法。本模板根据华南理工大学博士学位论文\href{https://github.com/alwintsui/scutthesis}{模板}修改制作而成，在此表示感谢。
+\end{abstractCN}
+
+\keywordsCN{\textbf{毕业论文；上海财经大学；\textbf{\LaTeX}；\LyX{}}}
+\begin{abstractEN}
+The english abstract.
+\end{abstractEN}
+
+\keywordsEN{\textbf{Thesis; SUFE; \textbf{\LaTeX}; \LyX{}}}
+
+\tableofcontents{}
+
+\mainmatter
+
+
+\chapter{引言}
+
+
+\section{选题背景与意义}
+
+为方便上海财经大学博士毕业生使用\LaTeX 和\LyX{}完成毕业论文，将自己写毕业论文时的模板开源。本模板基于华南理工大学博士学位论文\href{https://github.com/alwintsui/scutthesis}{模板}修改制作而成。如果您对这个模板有改进，请fork
+and pull。感谢。
+
+
+\section{研究的主要创新之处}
+
+市面上第一个上海财经大学的博士毕业论文模板。
+
+
+\chapter{文献综述}
+
+
+\section{代码来源}
+
+基础模板来源于华南理工大学博士学位论文\href{https://github.com/alwintsui/scutthesis}{模板}，并根据上海财经大学学位论文的要求进行了相应的修改。
+
+
+\chapter{使用方法}
+
+
+\section{基本使用方法}
+
+对于\LaTeX{}用户，请使用根目录下的Thesis\_main.tex相应修改即可，并使用xelatex命令进行编译。对于\LyX{}用户，修改Thesis\_main.lyx即可。
+
+
+\section{格式修改需求}
+
+格式定义在sufethesis.cls文件中，可以根据自己的需求修改此文件。在不确定的情况下不建议直接修改此文件。
+
+
+\section{字体}
+
+本模板在mac下编译通过，如果使用其他系统（如Linux、Windows等），需要修改sufethesis.cls中的字体为相应的系统字体：
+\begin{quotation}
+\textbackslash{}setCJKmainfont\{Songti SC\}
+
+\textbackslash{}setCJKfamilyfont\{song\}\{Songti SC\}
+
+\textbackslash{}setCJKfamilyfont\{hei\}\{Heiti SC\} 
+
+\textbackslash{}setCJKfamilyfont\{kai\}\{Kaiti SC\} 
+
+\textbackslash{}setCJKfamilyfont\{fang\}\{STFangsong\}
+
+\textbackslash{}newcommand\{\textbackslash{}songti\}\{\textbackslash{}CJKfamily\{song\}\} 
+
+\textbackslash{}newcommand\{\textbackslash{}heiti\}\{\textbackslash{}CJKfamily\{hei\}\} 
+
+\textbackslash{}newcommand\{\textbackslash{}kaiti\}\{\textbackslash{}CJKfamily\{kai\}\} 
+
+\textbackslash{}newcommand\{\textbackslash{}fangsong\}\{\textbackslash{}CJKfamily\{fang\}\}
+\end{quotation}
+将「Songti SC」等分别修改为系统对应的字体即可。\textbf{不修改字体会导致编译不通过}。
+
+
+\section{公式录入}
+
+公式输入与\LaTeX{}及\LyX{}使用方法一致，如$y=x'\beta+\epsilon$，以及：
+\[
+\hat{\beta}=\left(X'X\right)^{-1}X'Y
+\]
+此外公式可以进行编号：
+\begin{equation}
+\hat{\beta}_{iv}=\left[X'Z\left(Z'Z\right)^{-1}Z'X\right]^{-1}\left[X'Z\left(Z'Z\right)^{-1}Z'Y\right]
+\end{equation}
+公式编号自动按照章进行分组。
+
+
+\section{定理声明}
+
+可以声明定理等，如：
+\begin{theorem}
+OLS估计为最优无偏线性估计量（BLUE），且$\hat{\beta}\overset{p}{\rightarrow}\beta$。\end{theorem}
+\begin{proof}
+略。
+\end{proof}
+
+
+\section{图片、表格插入}
+
+图片和表格编号实例：
+
+\begin{table}
+
+
+\caption{表格示例}
+
+
+\begin{centering}
+\begin{tabular}{ccc}
+\hline 
+ & (1) & (2)\tabularnewline
+\hline 
+labor & $\underset{(0.2)}{0.7}${*}{*} & $\underset{(0.2)}{0.7}${*}{*}\tabularnewline
+capital & $\underset{(0.1)}{0.3}${*}{*} & $\underset{(0.1)}{0.3}${*}{*}\tabularnewline
+Constant & $\underset{(0.5)}{1.5}${*}{*} & $\underset{(0.5)}{1.5}${*}{*}\tabularnewline
+\hline 
+\multicolumn{3}{l}{{\small{}注：仅为示意性展示}}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\end{table}
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.4]{figures/1}
+\par\end{centering}
+
+\caption{图示例}
+
+
+\end{figure}
+
+
+
+\section{参考文献}
+
+参考文献可以使用Bib\TeX{}进行管理，覆盖sufethesis.bib即可。
+
+
+\chapter{结论}
+
+Enjoy it.
+
+\bibliographystyle{sufethesis}
+\nocite{*}
+\bibliography{sufethesis}
+
+
+
+\chapterx{致谢}
+
+感谢之前的代码提供者，特别是华南理工大学博士学位论文\href{https://github.com/alwintsui/scutthesis}{模板}的制作者。
+
+\begin{minipage}[t]{0.8\columnwidth}%
+\begin{flushright}
+司继春
+\par\end{flushright}
+
+\begin{flushright}
+2016年8月1日
+\par\end{flushright}%
+\end{minipage}
+
+
+\chapterx{攻读博士学位期间取得的研究成果}
+
+已发表（包括已接受待发表）的论文，以及已投稿、或已成文打算投稿、或拟成文投稿的论文情况（只填写与学位论文内容相关的部分）：
+
+\begin{table}
+\begin{longtable}{|>{\centering}m{0.5cm}|>{\centering}m{2.3cm}|>{\centering}m{3.5cm}|>{\centering}m{2.6cm}|>{\centering}m{2cm}|>{\centering}m{1.3cm}|>{\centering}m{0.9cm}|}
+\hline 
+序号 & 作者（全体作者，按顺序排列） & 题 目 & 发表或投稿刊物名称、级别 & 发表的卷期、年月、页码 & 相当于学位论文的哪一部分（章、节） & 被索引收录情况\tabularnewline
+\hline 
+1 &  &  &  &  &  & \tabularnewline
+\hline 
+ &  &  &  &  &  & \tabularnewline
+\hline 
+ &  &  &  &  &  & \tabularnewline
+\hline 
+ &  &  &  &  &  & \tabularnewline
+\hline 
+ &  &  &  &  &  & \tabularnewline
+\hline 
+ &  &  &  &  &  & \tabularnewline
+\hline 
+\end{longtable}
+\end{table}
+
+\end{document}
